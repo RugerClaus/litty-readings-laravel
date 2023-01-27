@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(100, 206, 187);
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  overflow-x: hidden;
+}
+body .mobileNav {
+  display: none;
+}
+body .logobox {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 110px;
+  position: relative;
+  top: 50px;
+}
+body .logobox .logo {
+  position: absolute;
+}
+body .logobox .header {
+  height: 105px;
+  width: 100%;
+  border-top: 1px solid rgb(245, 198, 69);
+  border-bottom: 1px solid rgb(245, 198, 69);
+}
+body .logobox .header .innerHeader {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body .logobox .header .innerHeader .socmed {
+  display: flex;
+  grid-column: 1;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body .logobox .header .innerHeader .socmed a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .logobox .header .innerHeader nav {
+  display: flex;
+  grid-column: 3;
+  height: 95px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .logobox .header .innerHeader nav a {
+  text-decoration: none;
+  color: black;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+body .wrapper {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(245, 198, 69);
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+body .wrapper main .header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+body .wrapper main .header img {
+  width: 80%;
+}
+body .wrapper main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-top: 0px;
+}
+body .wrapper main .blogposts {
+  display: flex;
+  flex-direction: column;
+  font-family: spe;
+  font-size: 2rem;
+  color: rgb(245, 198, 69);
+  gap: 2rem;
+  padding: 50px;
+}
+body .wrapper main .blogposts .blogpost {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(245, 198, 69);
+}
+body .wrapper main .blogposts .blogpost .article b {
+  color: white;
+  font-size: 3rem;
+}
+body .wrapper main .blogposts .blogpost .article p b {
+  color: white;
+  font-size: 3rem;
+}
+body main .maincontent {
+  flex-direction: row;
+}
+body .wrapper main .maincontent .imgwrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+body .wrapper main .maincontent .imgwrapper img {
+  border: 1px solid rgb(245, 198, 69);
+}
+body .wrapper main .maincontent .text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body .wrapper main .maincontent .text .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper main .maincontent .text .logo img {
+  grid-column: 4;
+  width: 100%;
+}
+body .wrapper main .maincontent .text p {
+  font-size: 1.5rem;
+  font-weight: 50;
+  font-family: spe;
+  color: rgb(245, 198, 69);
+}
+body .footer {
+  display: flex;
+  width: 100vw;
+  color: white;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: spe;
+  src: url(SpecialElite-Regular.ttf);
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pageActive {
+  color: aqua;
+}
+
+.bookNow {
+  font-size: 2rem;
+  width: fit-content;
+  background-color: rgb(100, 206, 187);
+  color: blue;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  body .logobox {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  body .logobox .logo {
+    position: relative;
+  }
+  body .logobox .logo img {
+    width: 100%;
+  }
+  body .logobox .header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px;
+  }
+  body .logobox .header .innerHeader {
+    display: flex;
+    flex-direction: column;
+  }
+  body .logobox .header .innerHeader .socmed {
+    flex-direction: column;
+  }
+  body .logobox .header .innerHeader nav {
+    flex-direction: column;
+  }
+  body .wrapper {
+    width: 100%;
+  }
+  body .wrapper main .header {
+    padding: 10px;
+  }
+  body .wrapper main .header img {
+    width: 100%;
+  }
+  body .wrapper main .maincontent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  body .wrapper main .maincontent .imgwrapper {
+    width: 100%;
+  }
+  body .wrapper main .maincontent .imgwrapper img {
+    width: 100%;
+  }
+  body .wrapper main .maincontent .text {
+    width: 100%;
+  }
+  body .wrapper main .maincontent .blogposts {
+    padding: 0px;
+    padding-top: 10px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  body .wrapper main .maincontent .blogposts .blogpost {
+    padding: 10px;
+    width: 100%;
+  }
+  body .wrapper main .maincontent .blogposts .blogpost .article p b {
+    text-align: center;
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=index.css.map */
