@@ -65,6 +65,7 @@
                     </form>
                 @elseif($service->id === 8)
                     <form action="" method="post">
+                        <input type="hidden" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
                 @endif

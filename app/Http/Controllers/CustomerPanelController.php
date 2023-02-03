@@ -28,4 +28,9 @@ class CustomerPanelController extends Controller
     {
         return view('customer.contact');
     }
+    public function schedule(Request $request)
+    {
+        $selection = $request->selection;
+        return view('customer.schedule');
+    }
 }
