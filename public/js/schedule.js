@@ -2,19 +2,19 @@ const date = document.querySelector('.day')
 const option = document.createElement('option')
 const month = document.querySelector('.month').innerHTML
 const year = document.querySelector('.year')
-const today = new Date()
+const tod = new Date()
 
 const form = document.querySelector('.scheduler')
 
 function getDates(numofdays) {
     for(let i = 0; i < numofdays; i++) {
-        date.innerHTML = option;
-        option.className = 'date';
+        let subel = date.appendChild(option);
+        subel.className = 'date';
         let days = document.querySelectorAll('.date')
 
         days.forEach(day => {
-            day.value = i
-            day.innerHTML = i
+            day.value = i.toString
+            day.innerHTML = i.toString
         })
     }
 }
@@ -59,5 +59,5 @@ switch(month) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    year.value = today.getFullYear()
+    year.value = tod.getFullYear()
 })

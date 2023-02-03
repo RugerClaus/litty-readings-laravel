@@ -65,4 +65,4 @@ Route::get('/blog', [CustomerPanelController::class, 'blog'])->name('cust.blog')
 
 Route::get('/contact', [CustomerPanelController::class, 'contact'])->name('cust.contact');
 
-Route::get('/schedule', [CustomerPanelController::class, 'schedule'])->name('cust.schedule');
+Route::post('/schedule', [CustomerPanelController::class, 'schedule'])->name('cust.schedule');

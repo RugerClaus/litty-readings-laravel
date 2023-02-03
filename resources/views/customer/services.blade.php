@@ -56,17 +56,20 @@
                     <h2>${{$service->price}}</h2>
                 </div>
                 @if ($service->id === 6)
-                    <form action="" method="post">
+                    <form action="{{route('cust.schedule')}}" method="post">
+                        @csrf
                         <input type="hidden" name="selection" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
                 @elseif($service->id === 7)
-                    <form action="" method="post">
+                    <form action="{{route('cust.schedule')}}" method="post">
+                        @csrf
                         <input type="hidden" name="selection" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
                 @elseif($service->id === 8)
-                    <form action="" method="post">
+                    <form action="{{route('cust.schedule')}}" method="post">
+                        @csrf
                         <input type="hidden" name="selection" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
