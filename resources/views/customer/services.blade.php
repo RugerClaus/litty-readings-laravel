@@ -57,15 +57,17 @@
                 </div>
                 @if ($service->id === 6)
                     <form action="" method="post">
+                        <input type="hidden" name="selection" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
                 @elseif($service->id === 7)
                     <form action="" method="post">
+                        <input type="hidden" name="selection" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
                 @elseif($service->id === 8)
                     <form action="" method="post">
-                        <input type="hidden" value="{{$service->id}}">
+                        <input type="hidden" name="selection" value="{{$service->id}}">
                         <input type="submit" name="bookappt" class="bookNow" value="Book Now!" />
                     </form>
                 @endif
